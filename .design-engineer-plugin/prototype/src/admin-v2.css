@@ -1,0 +1,387 @@
+/* ===== ADMIN V2 CSS START ===== */
+/* Editors and screens added on 01.10 (course, lesson, activities, report result, notifications) */
+.edhead{position:sticky;top:0;z-index:5;background:var(--sheet);border-bottom:1px solid var(--rule);display:flex;align-items:center;gap:12px;padding:14px 40px}
+.ed-cols{display:flex;gap:28px;align-items:flex-start}
+.ed-side{width:320px;flex:none;position:sticky;top:96px;display:flex;flex-direction:column;gap:16px}
+.note{display:flex;gap:10px;background:var(--margin);border-radius:10px;padding:12px 14px;align-items:flex-start}
+.chk{width:20px;height:20px;border-radius:50%;display:grid;place-items:center;flex:none;color:#fff}
+.chk.ok{background:var(--approved)}.chk.warn{background:var(--highlighter-wash);color:var(--highlighter)}
+.media{display:flex;align-items:center;gap:14px;padding:10px;border:1px solid var(--rule);border-radius:10px;background:var(--sheet)}
+.thumb{width:112px;height:63px;border-radius:8px;flex:none;display:grid;place-items:center;color:#fff}
+.ol{overflow:hidden}
+.ol-mod{display:flex;align-items:center;gap:12px;padding:14px 16px;cursor:pointer;border-top:1px solid var(--rule)}
+.ol-mod:first-child{border-top:0}
+.ol-mod:hover{background:#FAFAF8}.ol-mod.open{background:var(--margin)}
+.ol-item{display:flex;align-items:center;gap:12px;padding:10px 16px 10px 52px;border-top:1px solid var(--rule);cursor:pointer}
+.ol-item:hover{background:#FAFAF8}
+.ol-item.act{padding-left:88px}
+.grip{color:var(--pencil-faded);cursor:grab;display:grid;place-items:center;flex:none}
+.numtile{width:28px;height:28px;border-radius:8px;background:var(--margin);display:grid;place-items:center;font-size:12px;font-weight:600;color:var(--pencil);flex:none}
+.numtile.on{background:var(--violet-wash);color:var(--ink-violet-deep)}
+.ol-mod.open .numtile:not(.on){background:var(--sheet)}
+.typeicon.sm{width:30px;height:30px;border-radius:8px}
+.addrow{display:flex;align-items:center;gap:8px;padding:10px 16px 10px 52px;color:var(--ink-violet-deep);font-size:13px;font-weight:500;width:100%;text-align:left;border-top:1px solid var(--rule)}
+.addrow.act{padding-left:88px;border-top:0}
+.addrow:hover{background:#FAFAF8}
+.evchip{display:inline-flex;align-items:center;gap:8px;padding:6px 8px 6px 10px;border-radius:8px;background:var(--margin)}
+.block{border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--sheet)}
+.block-h{display:flex;align-items:center;gap:10px;padding:10px 12px}
+.block-b{padding:0 12px 12px 34px}
+.chipbtn{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid var(--rule-strong);border-radius:8px;font-size:13px;background:var(--sheet)}
+.chipbtn:hover{background:var(--margin)}
+.menu .mi.tall{align-items:flex-start;padding:10px 14px;gap:12px}
+.iconbtn.ghost{border-color:transparent;background:none}
+.dropdown{position:absolute;right:0;top:calc(100% + 8px);width:400px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--lift-strong);z-index:20;overflow:hidden;text-align:left}
+.nitem{display:flex;gap:12px;padding:12px 16px;border-top:1px solid var(--rule)}
+.nitem.unread{background:var(--violet-wash)}
+.ro{background:var(--margin);color:var(--ink)}
+/* Activity editors */
+.qlist{width:330px;flex:none}
+.qitem{display:flex;align-items:flex-start;gap:10px;padding:10px 14px;border-top:1px solid var(--rule);cursor:pointer;text-align:left;width:100%}
+.qitem:hover{background:#FAFAF8}
+.qitem.on{background:var(--violet-wash)}
+.ans{display:flex;align-items:center;gap:10px;padding:8px 10px;border:1px solid var(--rule-strong);border-radius:8px;background:var(--sheet)}
+.ans.ok{border-color:var(--approved);background:var(--approved-wash)}
+.ans input{border:0;outline:0;background:none;flex:1;min-width:0;font-size:14px;color:var(--ink)}
+.radio{width:18px;height:18px;border-radius:50%;border:1.5px solid var(--rule-strong);background:var(--sheet);flex:none;display:grid;place-items:center;cursor:pointer}
+.radio.on{border-color:var(--approved)}.radio.on::after{content:"";width:8px;height:8px;border-radius:50%;background:var(--approved)}
+.sq{border-radius:4px}.sq.on{background:var(--approved);color:#fff}.sq.on::after{display:none}
+.stmt{display:flex;flex-direction:column;gap:8px;padding:14px 16px;border-top:1px solid var(--rule)}
+.stmt.on{background:var(--margin)}
+.wd{display:inline-block;padding:2px 3px;border-radius:5px;cursor:pointer;line-height:24px}
+.wd:not(.gap){margin:0 -3px}
+.gapchip{display:inline-block;padding:0 8px;border-radius:6px;background:var(--violet-wash);color:var(--ink-violet-deep);font-weight:500;line-height:24px}
+.gapchip .wd{padding:0 3px}
+.gapchip .wd:hover{background:none;text-decoration:underline}
+.wd:hover{background:var(--margin)}
+.wd.sel{background:var(--ink-violet);color:#fff}
+.wd.gap{background:var(--violet-wash);color:var(--ink-violet-deep);font-weight:500;padding:2px 8px}
+.blank{display:inline-block;width:96px;height:24px;border:1px solid var(--rule-strong);border-radius:6px;vertical-align:middle;background:var(--sheet)}
+.acc{display:inline-flex;align-items:center;gap:6px;padding:2px 8px;border-radius:999px;border:1px solid var(--rule-strong);font-size:12px;font-weight:500}
+/* Report result */
+.chartrow{display:grid;grid-template-columns:120px 1fr 28px;gap:12px;align-items:center}
+.chartbar{height:14px;border-radius:4px;background:var(--rule-strong)}
+.chartbar.top{background:var(--ink-violet)}
+.colpanel{width:280px;flex:none;border-left:1px solid var(--rule);background:var(--sheet);padding:20px;display:flex;flex-direction:column;gap:16px;align-self:stretch}
+/* account block instead of the always-on role switch; progress chips on the learner dashboard */
+.acct{margin-top:auto;display:flex;align-items:center;gap:10px;padding:12px 8px 6px;border-top:1px solid var(--rule);width:100%;border-radius:0}
+.acct:hover{background:var(--margin)}
+.proto{bottom:78px}
+.chip{display:inline-flex;align-items:center;gap:6px;padding:6px 12px;border-radius:999px;background:var(--sheet);border:1px solid var(--rule);font-size:13px;line-height:18px;font-weight:500;white-space:nowrap}
+a.chip:hover,button.chip:hover{background:var(--margin)}
+/* sidebar rail */
+.app.collapsed{grid-template-columns:68px 1fr}
+.side.rail{padding:16px 10px;align-items:center}
+.side.rail .nav{justify-content:center;padding:9px;width:44px;position:relative}
+.side.rail .nav .badge-n{position:absolute;top:0;right:-4px;margin:0;padding:0 5px;font-size:10px;line-height:14px}
+.side.rail .acct{justify-content:center;padding:12px 0 6px}
+.nav-collapsed .proto-btn .lbl{display:none}
+.nav-collapsed .proto-btn{padding:8px 10px}
+/* fixed and offset by the sidebar, the bar had less room than its labels and wrapped them; keep each label on 1 line */
+.bulkbar{white-space:nowrap}
+.nav-collapsed .bulkbar{left:calc(50% + 34px)}
+.side .tip[data-tip]:hover::after{left:auto;right:0}
+/* app bar on every screen: back / forward on the left, search and notifications on the right */
+/* the app bar stays on top while the page scrolls; editor headers stick right under it */
+.appbar{height:64px;flex:none;display:flex;align-items:center;gap:12px;padding:0 40px;background:var(--sheet);border-bottom:1px solid var(--rule);position:sticky;top:0;z-index:7}
+.main{scroll-padding-top:72px}
+.edhead,.main>[style*="position:sticky;top:0"]{top:64px!important}
+.ed-side{top:160px}
+#ev-side{top:168px!important}
+.navhist{display:flex}
+.side:not(.rail){padding-top:16px} /* logo row centred on the app bar */
+.appbar .iconbtn:disabled{color:var(--pencil-faded);cursor:default}
+.appbar .iconbtn:disabled:hover{background:none}
+.overbar.amber{background:var(--highlighter)}
+.count.amber{background:var(--highlighter-wash);color:var(--highlighter)}
+/* search results under the top bar search */
+.searchwrap{position:relative}
+.sbox{display:none;position:absolute;right:0;top:calc(100% + 8px);width:420px;max-width:calc(100vw - 24px);max-height:min(480px,70vh);overflow-y:auto;padding-bottom:6px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;box-shadow:var(--lift-strong);z-index:25;text-align:left}
+.searchwrap.open .sbox{display:block}
+.sitem{display:flex;align-items:center;gap:10px;width:100%;padding:8px 16px}
+.sitem:hover,.sitem.on{background:var(--margin)}
+/* breadcrumbs are the way up in editors (no separate back button) */
+.crumb{display:inline;color:inherit;font:inherit;background:none;border:0;padding:0;cursor:pointer;text-decoration:none}
+.crumb:hover{color:var(--ink);text-decoration:underline}
+.menu{z-index:110}
+/* review status steps (from Scale): a soft strip, done = green, now = violet, next = hollow */
+.steps{list-style:none;margin:0;padding:14px 16px;border-radius:10px;background:var(--margin);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.steps li{display:flex;gap:10px;align-items:flex-start;min-width:0}
+.steps .sdot{width:10px;height:10px;border-radius:50%;margin-top:5px;flex:none;border:2px solid var(--rule-strong);background:var(--sheet)}
+.steps li.done .sdot{background:var(--approved);border-color:var(--approved)}
+.steps li.now .sdot{background:var(--ink-violet);border-color:var(--ink-violet)}
+/* learner tasks board (from Scale) */
+.tboard{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px;align-items:start}
+.tcol{background:var(--margin);border-radius:14px;padding:12px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.tcol-h{padding:4px 4px 2px}
+.tcount{font-size:12px;line-height:16px;font-weight:500;color:var(--pencil);background:var(--sheet);border-radius:999px;padding:1px 8px}
+.tcard{display:flex;flex-direction:column;gap:8px;padding:14px 16px;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;cursor:pointer;transition:border-color .15s}
+.tcard:hover{border-color:var(--rule-strong)}
+.cdot{width:8px;height:8px;border-radius:50%;flex:none}
+@media (max-width:767px){.tboard{grid-template-columns:minmax(0,1fr)}}
+/* ===== Responsive: the page works from 1440 down to a phone ===== */
+body,.app{min-width:0!important}
+.narrow{display:none!important}
+#app{height:100%!important;overflow-x:hidden}
+.main{min-width:0}
+.app.mobile{grid-template-columns:minmax(0,1fr)}
+.side.drawer{position:fixed;top:0;left:0;bottom:0;width:280px;max-width:86vw;z-index:95;box-shadow:var(--lift-strong);animation:drawerin .22s var(--ease)}
+.drawer-scrim{position:fixed;inset:0;background:rgba(26,26,25,.35);z-index:94;animation:fadein .2s}
+@keyframes drawerin{from{transform:translateX(-100%)}to{transform:none}}
+.nav-mobile .bulkbar{left:50%}
+.nav-mobile .proto{bottom:16px}
+.nav-mobile .proto-btn .lbl{display:none}
+.nav-mobile .proto-btn{padding:8px 10px}
+.drawer-open .proto{display:none}
+.dropdown{max-width:calc(100vw - 24px)}
+.dialog{max-width:calc(100vw - 32px)}
+.rpanel{max-width:100%}
+/* learner dashboard under 1440: Continue learning across the top, then This week | My courses and Contacts as 2 halves (1 column under 1000) */
+@media (min-width:1000px) and (max-width:1439px){
+ .dash-cols{display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;align-items:start}
+ .dash-cols>.grow{display:contents}
+ .dash-cols>.grow>:first-child{grid-column:1/-1}
+ .dash-side{display:flex!important;flex-direction:column;align-items:stretch;gap:24px;min-width:0}
+}
+@media (max-width:999px){.dash-side{grid-template-columns:minmax(0,1fr)!important}}
+/* a week row that gets narrow puts the due date and the button on a second line */
+section.card:has(.wl-row){container-type:inline-size}
+@container (max-width:620px){
+ .wl-row{flex-wrap:wrap;row-gap:8px}
+ .wl-row>.grow{flex:1 1 calc(100% - 50px)}
+ .wl-due{margin-left:50px;flex:1 1 auto}
+}
+/* tables keep their columns and scroll sideways inside their own box when the page is narrow */
+.tbl,.card:has(>.tr){overflow-x:auto;overflow-y:hidden}
+.tbl>.tr,.card>.tr{min-width:var(--tmin,0px)}
+.field,.field select,.field input{min-width:0}
+@media (max-width:999px){
+ .main [style*="grid-template-columns:minmax(0,1fr) 340px"],.main [style*="grid-template-columns:minmax(0,1fr) 360px"]{grid-template-columns:minmax(0,1fr)!important}
+ .row:has(>#ev-side),.row:has(>[style*="width:320px;flex:none"]),.row:has(>[style*="width:300px;flex:none"]),.row:has(>.qlist){flex-direction:column!important;align-items:stretch!important}
+ #ev-side,.row>[style*="width:320px;flex:none"],.row>[style*="width:300px;flex:none"]{width:auto!important;position:static!important}
+ .ed-cols{flex-direction:column;align-items:stretch}
+ .ed-side{width:auto;position:static}
+ .qlist{width:auto}
+ .colpanel{position:fixed;top:0;right:0;bottom:0;z-index:40;width:min(320px,100%);overflow:auto;box-shadow:var(--lift-strong)}
+ .msgs{grid-template-columns:240px minmax(0,1fr)}
+ .msgs .row.gap12[style*="margin:16px 20px 0"]{flex-wrap:wrap;row-gap:10px}
+ .msgs .row.gap12[style*="margin:16px 20px 0"]>.grow{flex:1 1 180px}
+ .tabs{overflow-x:auto;scrollbar-width:none}
+ .tabs::-webkit-scrollbar{display:none}
+ .tab{flex:none}
+ .row:has(>[aria-label="Your progress"]){flex-wrap:wrap;row-gap:12px}
+ .row:has(>[aria-label="Your progress"])>.grow{flex:1 1 360px}
+ /* review queue: below 1000 px each row is a 2-line card (title + status, then student + waiting time) */
+ .tbl:has(>.tr[data-act="open"])>.tr.head{display:none}
+ .tbl:has(>.tr[data-act="open"])>.tr{display:grid;grid-template-columns:40px minmax(0,1fr) auto auto 36px;grid-template-areas:"cb sub sub st act" ". who when when .";height:auto;min-width:0;padding:12px 4px 12px 0;row-gap:6px;align-items:center}
+ .tr>[data-k]{width:auto!important;padding:0 8px}
+ .tr>[data-k="cb"]{grid-area:cb;padding-left:16px!important}
+ .tr>[data-k="Submission"]{grid-area:sub}
+ .tr>[data-k="Student"]{grid-area:who}
+ .tr>[data-k="Status"]{grid-area:st;justify-content:flex-end}
+ .tr>[data-k="Submitted"]{grid-area:when;flex-direction:row!important;align-items:center!important;justify-content:flex-start!important;gap:8px!important}
+ .tr>[data-k="act"]{grid-area:act}
+ .tr>[data-k="Reviewer"],.tr>[data-k="Last activity"]{display:none!important}
+}
+@media (max-width:767px){
+ .page{padding:16px 16px 96px;gap:16px}
+ .h1{font-size:24px;line-height:30px}
+ .appbar{padding:0 12px;gap:6px}
+ .appbar>.grow{display:none}
+ .appbar .searchwrap{flex:1 1 auto;min-width:0}
+ .appbar .search{width:100%;min-width:0}
+ .sbox{position:fixed;left:12px;right:12px;top:60px;width:auto}
+ .appbar .kbd{display:none}
+ .edhead{padding:12px 16px;flex-wrap:wrap;row-gap:10px}
+ .edhead,.main>[style*="position:sticky;top:0"]{position:static!important}
+ .edhead>.col.grow{flex:1 1 100%}
+ .msgs{grid-template-columns:minmax(0,1fr);height:auto}
+ .week{grid-template-columns:minmax(0,1fr)}
+ .day{min-height:0;border-right:0;border-bottom:1px solid var(--rule)}
+ .dropdown{position:fixed;left:12px;right:12px;top:60px;width:auto}
+ .bulkbar{left:12px!important;right:12px;transform:none;overflow-x:auto}
+ .toast{max-width:calc(100vw - 24px)}
+ .page label.input[style*="width:280px"],.page label.search[style*="width"]{width:100%!important}
+ [aria-label="Your progress"],.page>.row.gap8,.row.gap12:has(>.btn),.row.gap8:has(>.btn){flex-wrap:wrap}
+ .card .row.between{flex-wrap:wrap;row-gap:8px}
+ .row:has(>.field){flex-direction:column!important;align-items:stretch!important}
+ .field label.input,.field label.input>select,.field label.input>input{min-width:0;width:100%}
+ section.card.row:has(>a>.cover){flex-direction:column;align-items:stretch;gap:16px}
+ section.card.row>a>.cover{width:100%!important;height:150px!important}
+ /* review panel full screen: no keyboard hints, grade wraps instead of squeezing */
+ .rp-top{padding:12px 16px}
+ .rp-body{padding:16px}
+ .rp-foot{padding-left:16px!important;padding-right:16px!important}
+ .rp-foot .row.gap12{flex-wrap:wrap;row-gap:10px}
+ .rp-foot label.input{flex:none}
+ .rp-foot .row.gap8>.grow:has(.kb){display:none}
+ .rp-foot .row.gap8{justify-content:flex-end}
+ .rpanel .row.gap8.s>.med{white-space:nowrap}
+ /* Create event header: title on its own line, actions under it */
+ .main>.row.gap16>.row.gap16[style*="padding:16px 40px"]{flex-wrap:wrap;row-gap:10px;padding:12px 16px!important}
+ .main>.row.gap16>.row.gap16[style*="padding:16px 40px"]>.col.grow{flex:1 1 100%}
+ /* Messages: list first, a conversation opens on its own screen with a way back to the list */
+ .msgs>:first-child{border-right:0!important}
+ .msgs:not(.show-thread)>.col{display:none}
+ .msgs.show-thread>:first-child{display:none}
+ .steps{grid-template-columns:minmax(0,1fr)}
+ .livecard{flex-wrap:wrap;row-gap:10px}
+ .livecard>.grow{flex:1 1 calc(100% - 52px)}
+ .livecard>.grow+*{margin-left:52px}
+ .dropzone{display:block;text-align:center}
+ .dropzone>svg{display:inline-block;vertical-align:-3px;margin-right:4px}
+ .pad24.row.gap24{flex-wrap:wrap}
+ .pad24.row.gap24>.grow{flex:1 1 100%}
+ .media,.filerow{flex-wrap:wrap}
+ .media>.grow,.filerow>.grow{flex:1 1 160px}
+ .card>.row.gap16[style*="padding:14px 20px"]{flex-wrap:wrap;row-gap:8px;padding:14px 16px!important}
+ .card>.row.gap16[style*="padding:14px 20px"]>.grow{flex:1 1 calc(100% - 56px)}
+ .card>.row.gap16[style*="padding:14px 20px"]>.grow+*{margin-left:56px}
+ /* list items with an action (admin home): the action moves under the text */
+ .card>.row.gap12[style*="padding:16px 20px"]{flex-wrap:wrap;row-gap:10px;padding:14px 16px!important}
+ .card>.row.gap12[style*="padding:16px 20px"]>.grow{flex:1 1 calc(100% - 52px)}
+ .card>.row.gap12[style*="padding:16px 20px"]>.grow+*{margin-left:52px}
+ .tbl:has(>.tr[data-act="open"])>.tr{grid-template-columns:40px minmax(0,1fr) auto 36px;grid-template-areas:"cb sub sub act" ". who st st" ". when when when"}
+}
+/* batch D: live class preparation, deadline reminder, finished course */
+.wl-row .prep{color:var(--ink);align-items:flex-start;margin-top:2px}
+.wl-row .prep .link,.livecard .prep .link{display:inline}
+.livecard .prep{color:var(--ink);align-items:flex-start;margin-top:2px}
+.remline{align-items:flex-start;margin-top:6px}
+.remline svg,.prep svg{flex:none;margin-top:2px}
+.cert{position:relative;overflow:hidden;display:flex;flex-direction:column;gap:6px;padding:28px 28px 24px;border:1px solid var(--rule);border-radius:12px;background:var(--paper)}
+/* the course colour is a straight band clipped by the corners, as in Figma, not a thick border that bends round them */
+.cert::before{content:"";position:absolute;left:0;right:0;top:0;height:4px;background:var(--cert,var(--ink-violet))}
+/* My courses on a phone: the fixed 260 px progress column squeezed the title until the lines overlapped; it goes under the title */
+@media (max-width:767px){
+ .mcrow{flex-wrap:wrap;row-gap:10px}
+ .mcrow>.grow{flex:1 1 0;min-width:0}
+ .mcrow>.mcprog,.mcrow>.badge{order:4;margin-left:72px}
+ .mcrow>.mcprog{width:calc(100% - 72px)!important}
+}
+/* .bar has flex:1 so it fills a row; inside a column that collapsed it to 0 px (dashboard and My courses lost their progress bars) */
+.col>.bar{flex:none;align-self:stretch}
+/* tables: every row gets 8 px on each side, so the outer cells (12 px) start 20 px from the edge,
+   the same inset as every other card; checkbox and row-menu cells move in with them */
+.tr{padding-left:8px;padding-right:8px}
+.tr>.td:first-child:has(>.cb){padding-left:12px!important} /* checkboxes start 20 px in too, as in Figma */
+/* badges as medals: the newest one large, then a grid; the next one grey with a progress ring */
+.badge-hero{display:flex;align-items:center;gap:24px;padding:24px 28px;background:var(--violet-wash);border-color:transparent}
+.badge-hero .medal{flex:none;animation:medalpop .7s var(--ease)}
+@keyframes medalpop{0%{transform:scale(.6) rotate(-12deg);opacity:0}70%{transform:scale(1.06) rotate(2deg);opacity:1}100%{transform:none}}
+.medals{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:16px}
+.medal-card{display:flex;flex-direction:column;align-items:center;text-align:center;gap:6px;padding:24px 16px 20px}
+.medal-card .medal{margin-bottom:8px}
+.medal-card .medal,.badge-hero .medal{filter:drop-shadow(0 6px 10px rgba(26,26,25,.14))}
+.badge-next{display:flex;align-items:center;gap:24px;padding:20px 28px;background:var(--margin);border-style:dashed}
+.badge-next .medal{flex:none}
+@media (max-width:767px){.medals{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.badge-hero,.badge-next{flex-direction:column;align-items:flex-start;gap:16px;padding:20px}}
+/* Messages as in Figma: 360 px list with search, rows without dividers, thread with day separators and a composer */
+.av36{width:36px;height:36px;font-size:13px;font-weight:600}.av40{width:40px;height:40px;font-size:13px;font-weight:600}
+.msgs{grid-template-columns:360px minmax(0,1fr);height:min(820px,calc(100vh - 172px))}
+.mlist{display:flex;flex-direction:column;border-right:1px solid var(--rule);min-height:0;min-width:0}
+.mlist-top{display:flex;flex-direction:column;gap:12px;padding:16px 16px 8px}
+.mlist-top .input{height:36px}
+.mtabs{border-bottom:0;gap:16px}
+.mrows{flex:1;overflow:auto;min-height:0}
+.msgs .conv{border-bottom:0;padding:12px 16px;align-items:flex-start;gap:12px}
+.msgs .conv:hover{background:#FAFAF8}.msgs .conv.on{background:var(--violet-wash)}
+.mthread{min-height:0;min-width:0}
+.mhead{display:flex;align-items:center;gap:12px;padding:14px 16px 14px 24px;border-bottom:1px solid var(--rule)}
+.mabout{display:flex;align-items:center;gap:12px;margin:16px 24px 0;padding:12px 14px;border-radius:10px;background:var(--margin)}
+.mabout .typeicon{background:var(--sheet);border:1px solid var(--rule)}
+.mbody{flex:1;overflow:auto;display:flex;flex-direction:column;gap:16px;padding:20px 24px;min-height:0}
+.mday{text-align:center;font-size:12px;line-height:16px;font-weight:500;color:var(--pencil-faded)}
+.mrow{display:flex;gap:10px;align-items:flex-start;max-width:min(506px,88%)}
+.mrow.me{align-self:flex-end}
+.mrow .bubble{max-width:none;border-radius:12px;font-size:14px;line-height:20px}
+.mrow .bubble.me{background:var(--violet-wash);color:var(--ink);margin-left:0}
+.mfile{display:flex;align-items:center;gap:10px;margin-top:10px;padding:8px 12px;border-radius:8px;background:var(--sheet);border:1px solid var(--rule);width:max-content;max-width:100%}
+.msys{display:flex;align-items:center;justify-content:center;gap:6px;color:var(--pencil);font-size:12px;line-height:16px;font-weight:500;flex-wrap:wrap;text-align:center}
+.mcompose{display:flex;align-items:center;gap:12px;padding:14px 16px 14px 24px;border-top:1px solid var(--rule)}
+@media (max-width:999px){.msgs{grid-template-columns:260px minmax(0,1fr)}.mabout{flex-wrap:wrap;row-gap:10px}.mabout>.grow{flex:1 1 180px}}
+@media (max-width:767px){.msgs{height:auto}.mbody{max-height:none}.mhead{padding:12px 16px}.mbody{padding:16px}.mabout{margin:12px 16px 0}.mcompose{padding:12px 16px}}
+/* Events (06.10): below 1440 px Repeat and Course hide, their text moves under the date and the title; loading bars stay inside their cell */
+.ev-rep2,.ev-crs2{display:none!important}
+@media (max-width:1439px){.ev-wide{display:none!important}.ev-rep2{display:block!important}.ev-crs2{display:inline!important}.ev-when{width:168px!important}}
+.tr .skel{max-width:100%}
+.seg.sm button{padding:3px 8px;font-size:13px;line-height:18px}
+@media (max-width:767px){.today-row{flex-wrap:wrap;row-gap:6px}.today-row>:first-child{width:100%!important}.today-row>.grow{flex:1 1 calc(100% - 50px)}.today-row>.btn{margin-left:50px}}
+/* the drop zone text flows as 1 sentence at every width (it broke into 3 columns in a narrow card) */
+.dropzone{display:block;text-align:center;line-height:20px}.dropzone>svg{display:inline-block;vertical-align:-3px;margin-right:4px}
+/* Calendar month view (06.10): day cards like the week columns, compact chips in the week's colours; dots on phones */
+.month{display:flex;flex-direction:column;gap:8px}
+.month .mhead{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px;padding:0 9px}
+.mgrid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.mcell{min-height:132px;min-width:0;background:var(--sheet);border:1px solid var(--rule);border-radius:12px;padding:8px;display:flex;flex-direction:column;gap:4px}
+.mcell.out{background:transparent}
+.mcell.out .mday{color:var(--pencil-faded)}
+.mcell.today{background:var(--violet-wash);border-color:var(--ink-violet)}
+.mday{align-self:flex-start;display:flex;align-items:baseline;gap:6px;font-size:14px;line-height:20px;font-weight:500;color:var(--ink);margin-bottom:2px}
+.mday:hover{color:var(--ink-violet-deep)}
+.mchip{display:block;width:100%;min-width:0;text-align:left;font-size:12px;line-height:16px;font-weight:500;padding:2px 6px;border-radius:6px;background:var(--margin);color:var(--ink);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mchip span{color:var(--pencil-faded);margin-right:4px}
+.mchip:hover{filter:brightness(.97)}
+.mchip.over{background:var(--red-wash)}.mchip.over span{color:var(--red-pen)}
+.mchip.dl{background:var(--highlighter-wash)}.mchip.dl span{color:var(--highlighter)}
+.mchip.class{background:var(--violet-wash)}.mchip.class span{color:var(--ink-violet-deep)}
+.mchip.done{opacity:.55}
+.mcell.today .mchip.class{background:var(--sheet);box-shadow:inset 0 0 0 1px var(--ink-violet)}
+@media (max-width:767px){.month .mhead,.mgrid{gap:4px}.month .mhead{padding:0 2px}.mcell{min-height:56px;padding:6px 4px;border-radius:8px;flex-direction:row;flex-wrap:wrap;align-content:flex-start;gap:3px}.mday{width:100%;font-size:13px;margin:0}.mday .c{display:none}
+ .mchip{width:7px;height:7px;padding:0;border-radius:50%;font-size:0;line-height:0;background:var(--pencil-faded)}.mchip span{display:none}.mchip.over{background:var(--red-pen)}.mchip.dl{background:var(--highlighter)}.mchip.class{background:var(--ink-violet)}.mcell>.c{display:none}}
+/* Certificates (06.10): 2 cards per row on desktop, 1 on a phone */
+.certs{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(360px,100%),1fr));gap:16px;align-items:start}
+/* Continue learning composed like Scale (06.10): the cover fills the left edge at full height and carries no play button,
+   the Resume button is the 1 action; the type tags are Neutral badges (labels, not buttons) */
+.continue{display:flex;padding:0;overflow:hidden}
+.continue-cover{flex:none;width:240px;align-self:stretch;display:block}
+.continue-cover .cover{width:100%!important;height:100%!important;min-height:200px;border-radius:0}
+.continue-body{flex:1;min-width:0;padding:24px;display:flex;flex-direction:column;gap:6px}
+.continue-tags{display:flex;gap:8px;flex-wrap:wrap;padding-top:6px}
+@media (max-width:767px){.continue{flex-direction:column}.continue-cover{width:auto;height:140px}.continue-cover .cover{min-height:0}.continue-body{padding:16px}}
+/* First-visit hints for the Prototype controls (06.10) */
+.tour-scrim{position:fixed;inset:0;background:rgba(26,26,25,.35);z-index:99}
+.tour-arrows{position:fixed;inset:0;width:100%;height:100%;z-index:101;pointer-events:none;overflow:visible}
+.tour-arrows path{fill:none;stroke:#fff;stroke-width:1.5}
+.tour-card{position:fixed;z-index:101;width:300px;display:flex;flex-direction:column;gap:8px;padding:8px 12px;background:var(--sheet);border-radius:10px;box-shadow:var(--lift)}
+.tour-card b{font-weight:600}
+.tour-intro{padding:14px 16px;gap:6px}
+.tour-intro .btn{margin-top:4px}
+/* “i” next to × in the Prototype controls header shows the hints again (06.10) */
+.proto-ic{width:24px;height:24px;border-radius:6px;display:grid;place-items:center;color:#9C9B95}
+.proto-ic:hover{color:#fff;background:#3A3A38}
+.proto-ic.on{color:#fff;background:#4A4A47}
+.tour-intro .s svg{display:inline-block;vertical-align:-2px}
+@media (max-width:759px){.proto-tour{display:none}}
+/* Contacts under My courses (06.10): the whole row opens the conversation, the icon only marks it */
+.contact{width:100%;padding:10px 16px 10px 20px;text-align:left}
+.contact:hover{background:#FAFAF8}
+.contact:hover .iconbtn{color:var(--ink)}
+/* 06.10: student pages fill the width the sidebar leaves, as the teacher pages already do, so collapsing the sidebar
+   widens the content instead of the empty strip on the right. Reading pages (assignment, badges, certificates,
+   finished course) keep their own max-width */
+.page{max-width:none}
+/* learner dashboard 1440 and wider (06.10): 2 rows on 1 grid, so Continue learning and My courses share a height and
+   This week starts on the same line as Contacts; in a taller card the progress and Resume sit at the bottom */
+@media (min-width:1440px){
+ .dash-cols{display:grid!important;grid-template-columns:minmax(0,1fr) 360px;gap:24px;align-items:start}
+ .dash-cols>.grow,.dash-cols>.dash-side{display:contents!important}
+ .dash-cols>.grow>:first-child{grid-column:1;grid-row:1;align-self:stretch}
+ .dash-cols>.grow>:nth-child(2){grid-column:1;grid-row:2}
+ .dash-side>:first-child{grid-column:2;grid-row:1;align-self:stretch}
+ .dash-side>:nth-child(2){grid-column:2;grid-row:2}
+ .continue-body>.col.gap6{margin-top:auto}
+}
+/* 06.10, checked against the mockups: event date field, formatting bar over Description, floating tooltip, clamped comment */
+.evdate{position:relative;cursor:pointer;gap:8px}
+.evdate input[type=date]{position:absolute;inset:0;opacity:0;pointer-events:none;width:100%}
+.rte{border:1px solid var(--rule);border-radius:10px;overflow:hidden;background:var(--sheet)}
+.rte-bar{display:flex;gap:2px;padding:4px 6px;border-bottom:1px solid var(--rule);background:var(--margin)}
+.rte .textarea{border:0;border-radius:0}
+.tip[data-tip]:hover::after{display:none}
+.ftip{position:fixed;z-index:300;transform:translateY(-100%);max-width:360px;padding:7px 10px;border-radius:6px;background:var(--night);color:#fff;font-size:12px;line-height:16px;font-weight:500;pointer-events:none}
+.clamp4{display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;margin:0}
+.clamp4.open{display:block}
+/* bell dot as in the mockup: 8 px accent dot at the top right of the glyph */
+.iconbtn .dot{top:7px;right:5px;width:8px;height:8px;background:var(--ink-violet);border:0}
+/* ===== ADMIN V2 CSS END ===== */
